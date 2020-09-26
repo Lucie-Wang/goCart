@@ -7,6 +7,10 @@
   padding-left: 15px;
 }
 
+span{
+  color: red !important;
+}
+
 .header h3 {
   padding-bottom: 20px;
   margin-top: 0;
