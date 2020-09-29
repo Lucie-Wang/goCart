@@ -14,27 +14,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
                 .formLogin()
-                .loginPage("/login")
-
-                .and()
+                .loginPage("/login");
+        http
                 .authorizeRequests()
                 .antMatchers("/cart/**").hasAuthority("ROLE_USER")
                 .antMatchers("/get*/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                 .antMatchers("/admin*/**").hasAuthority("ROLE_ADMIN")
-                .anyRequest().permitAll()
-                .and()
+                .anyRequest().permitAll();
+        http
                 .logout()
                 .logoutUrl("/logout");
 
     }
 
+    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .inMemoryAuthentication().withUser("stefanlaioffer@gmail.com").password("123").authorities("ROLE_ADMIN");
+                .inMemoryAuthentication().withUser("lucie@gmail.com").password("123").authorities("ROLE_ADMIN");
 
         auth
                 .jdbcAuthentication()
@@ -49,6 +50,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public static NoOpPasswordEncoder passwordEncoder() {
         return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
     }
-
 }
+
 

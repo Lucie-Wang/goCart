@@ -68,9 +68,48 @@
 									<input type="password" placeholder="******" class="form-control" id="confirmpass" />
 								</div>
 							</div>
+
+						<hr>
+						<div>
+							<center>Billing Address</center>
+						</div>
+
+						<div class="form-group">
+							<form:label path="billingAddress.address">Address</form:label>
+							<form:textarea type="text" placeholder="Enter Billing Address"
+										   class="form-control" path="billingAddress.address"></form:textarea>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<form:label path="billingAddress.city">City</form:label>
+								<form:input type="text" placeholder="Enter your City"
+											class="form-control" path="billingAddress.city"></form:input>
+							</div>
+							<div class="col-sm-6 form-group">
+								<form:label path="billingAddress.state">State</form:label>
+								<form:input type="text" placeholder="Enter your state.."
+											class="form-control" path="billingAddress.state"></form:input>
+								<form:errors path="billingAddress.state"></form:errors>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<form:label path="billingAddress.country">Country</form:label>
+								<form:input type="text" placeholder="Enter your City"
+											class="form-control" path="billingAddress.country"></form:input>
+							</div>
+							<div class="col-sm-6 form-group">
+								<form:label path="billingAddress.zipcode">ZipCode</form:label>
+								<form:input type="text" placeholder="Enter Zipcode"
+											class="form-control" path="billingAddress.zipcode"></form:input>
+								<form:errors path="billingAddress.zipcode"></form:errors>
+							</div>
+						</div>
 						<hr>
 						<div>
 							<center>Shipping Address</center>
+<%--							<form:label path="shippingAddress.address">Same as Billing Address</form:label>--%>
+<%--							<form:input type="checkbox" path="shippingAddress.address" ></form:input>--%>
 						</div>
 						<div class="form-group">
 							<form:label path="shippingAddress.address">Address</form:label>
@@ -103,41 +142,7 @@
 								<form:errors path="shippingAddress.zipcode"></form:errors>
 							</div>
 						</div>
-						<hr>
-						<div>
-							<center>Billing Address</center>
-						</div>
-						<div class="form-group">
-							<form:label path="billingAddress.address">Address</form:label>
-							<form:textarea type="text" placeholder="Enter Billing Address"
-								class="form-control" path="billingAddress.address"></form:textarea>
-						</div>
-						<div class="row">
-							<div class="col-sm-6 form-group">
-								<form:label path="billingAddress.city">City</form:label>
-								<form:input type="text" placeholder="Enter your City"
-									class="form-control" path="billingAddress.city"></form:input>
-							</div>
-							<div class="col-sm-6 form-group">
-								<form:label path="billingAddress.state">State</form:label>
-								<form:input type="text" placeholder="Enter your state.."
-									class="form-control" path="billingAddress.state"></form:input>
-								<form:errors path="billingAddress.state"></form:errors>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6 form-group">
-								<form:label path="billingAddress.country">Country</form:label>
-								<form:input type="text" placeholder="Enter your City"
-									class="form-control" path="billingAddress.country"></form:input>
-							</div>
-							<div class="col-sm-6 form-group">
-								<form:label path="billingAddress.zipcode">ZipCode</form:label>
-								<form:input type="text" placeholder="Enter Zipcode"
-									class="form-control" path="billingAddress.zipcode"></form:input>
-								<form:errors path="billingAddress.zipcode"></form:errors>
-							</div>
-						</div>
+
 
 						<div class="form-actions">
 							<button type="submit" class="btn btn-lg btn-info" onclick="return Validate()">Submit</button>

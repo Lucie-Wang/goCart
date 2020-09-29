@@ -2,7 +2,7 @@ var app = angular.module("myapp", []).controller(
 		"myController",
 		function($scope, $http) {
 
-			var BASE_PATH = "http://localhost:8080/onlineShop";
+			var BASE_PATH = "http://localhost:8080/goCart";
 
 			$scope.getProductList = function() {
 				$http.get(BASE_PATH + "/getProductsList")
@@ -46,8 +46,8 @@ var app = angular.module("myapp", []).controller(
 			}
 
 			$scope.calculateTotal = function() {
-				var total = 0.0;
-				for (var i = 0; i < $scope.carts.cartItem.length; i++)
+				let total = 0.0;
+				for (let i = 0; i < $scope.carts.cartItem.length; i++)
 					total = total + $scope.carts.cartItem[i].price;
 				return total;
 

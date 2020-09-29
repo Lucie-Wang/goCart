@@ -32,7 +32,7 @@
 						<img src="<c:url value="/resource/images/shopping1.jpg"/>" style="width:100%;" alt="Image1">
 					</div>
 					<div class="item">
-						<img src="<c:url value="/resource/images/pixel.jpg"/>" style="width:100%;" alt="Image2">
+						<img src="<c:url value="/resource/images/iphone.jpg"/>" style="width:100%;" alt="Image2">
 					</div>
 
 					<div class="item">
@@ -40,7 +40,7 @@
 					</div>
 
 					<div class="item">
-						<img src="<c:url value="/resource/images/buy.jpg"/>" style="width:100%;" alt="Image4">
+						<img src="<c:url value="/resource/images/buy.png"/>" style="width:100%;" alt="Image4">
 					</div>
 				</div>
 
